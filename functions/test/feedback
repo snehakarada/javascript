@@ -1,0 +1,11 @@
+Enter feedback here
+=> here insted of calling isFormatValid() in isDateAccordingToFormat() , 
+  if we call it in validate() then we can exit earlier than before.
+
+=> at line 13  if (format === 'mm-dd-yyyy' || 'dd-mm-yyyy')  you give condition
+  this. it's not correct.
+
+=> month validation and date validation, leap year are not implemented.
+
+=> you did't utilize time propely, means in 1:45 minutes you just implemented
+  isFormatValid() and isDateAccordingToFormat() .

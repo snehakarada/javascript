@@ -1,0 +1,36 @@
+Input Date|Format|Expected|Actual Result|Test category
+2020-10-10|yyyy-mm-dd|Valid|Valid|Simple date
+
+28-01-2024|yyyy-mm-dd|invalid|invalid|incorrect format
+2024-01-50|yyyy-mm-dd|ivalid|invalid|incorrect date
+2024-32-02|yyyy-mm-dd|invaid|invalid|incorrect month
+200a-02-02|yyyy-mm-dd|invalid|invalid|giving character in between date
+2005-05-18|yyyy-mm-dd|valid|valid|general date
+5-05-05|yyyy-mm-dd|valid|invalid|number of digits in year less than four
+0005-05-05|yyyy-mm-dd|valid|invalid|year started with zero
+2025-05-05|yyyy-mm-dd|valid|invalid|year that more than current year(2024)
+1900-01-01|yyyy-mm-dd|valid|valid|checking is that edge case
+1899-01-01|yyyy-mm-dd|vaild|invalid|year that is less than 1900
+2006-002-01|yyyy-mm-dd|invalid|invalid|month more than two digits started with zero
+2006-02-001|yyyy-mm-dd|invalid|invalid|date more than two digits started with zero
+2006-04-31|yyyy-mm-dd|invalid|valid|month with 30 days but date is 31
+
+
+2024-10-16|yyyy-mm-dd|valid|valid|date in leap year
+2006/01-28|yyyy-mm-dd|invalid|invalid|givingdifferent separators in between date
+2006/01/28|yyyy-mm-dd|valid|invalid|givingcompletly different separators other than '-'
+
+
+01-01-2005|dd-mm-yyyy|valid|invalid|general date
+2006-01-26|dd-mm-yyyy|invalid|invalid|incorrect format
+40-12-2006|dd-mm-yyyy|invalid|invalid|incorrect date
+04-39-2006|dd-mm-yyyy|invalid|invalid|incorrect month
+010-20-2006|dd-mm-yyyy|invalid|invalid|giving date more than two digits start with zero
+10-002-2006|dd-mm-yyyy|invalid|invalid| giving month more than two digits start with zero
+
+
+
+10-16-2024|mm-dd-yyyy|valid|invalid|general date
+2000-12-23|mm-dd-yyyy|invalid|invalid incorrect format
+32-12-2025|mm-dd-yyyy|invalid|invalid incorrect month
+12-32-2025|mm-dd-yyyy|invalid|invalid incorrect date
